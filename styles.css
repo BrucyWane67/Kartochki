@@ -2,3 +2,38 @@
 @media(max-width:1100px){.sidebar{width:210px;padding:26px 13px}.layout{grid-template-columns:210px minmax(0,1fr)}.config-panel{grid-template-columns:1fr 1fr}.sparkle{font-size:32px}.sparkle span{padding:8px 12px}.stat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.layout{display:block;padding-bottom:73px}.sidebar{display:none}.topbar{padding:24px 18px 19px}.topbar h1{font-size:25px}.topbar .eyebrow{font-size:9px}.topbar-actions .btn{padding:9px 11px;font-size:12px;min-height:39px}.view{padding:0 16px 30px}.study-intro{padding:24px 21px}.study-intro h2{font-size:23px}.sparkle{display:none}.mobile-nav{display:grid;position:fixed;bottom:0;left:0;right:0;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid #e4eaf2;padding:7px 7px max(7px,env(safe-area-inset-bottom));z-index:10;box-shadow:0 -10px 30px #16263a0b}.mobile-nav button{border:0;background:transparent;min-height:54px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px;color:#94a1b3;font-size:10px;font-weight:700;min-width:0}.mobile-nav button span{font-size:23px;font-weight:400}.mobile-nav button.is-active{color:#376ce8}.filters{flex-wrap:wrap}.filters>.field{flex:1;min-width:140px}.two-cols{grid-template-columns:1fr}.settings-grid{grid-template-columns:1fr}.settings-grid .panel p{min-height:0}.toast{bottom:86px}.modal-footer{padding-bottom:25px}.panel{padding:19px}}
 @media(max-width:460px){.topbar-actions{gap:5px}.topbar-actions #installBtn{display:none}.topbar-actions [data-action=open-import]{font-size:11px;min-height:40px;padding:8px 10px}.study-intro p{font-size:12px}.config-panel{gap:12px;padding:15px}.config-panel .field{grid-column:span 2}.config-panel .field:nth-child(n+2){grid-column:span 1}.config-panel .field select{font-size:12px;padding:0 7px}.study-toolbar{gap:10px}.study-count{order:3;width:100%;text-align:center;margin-left:0}.study-toolbar .btn{flex:1}.flashcard{min-height:300px;padding:17px}.card-word{font-size:35px}.section-heading h2{font-size:21px}.inline-actions{width:100%}.inline-actions .btn{flex:1}.stat-grid{gap:10px}.stat-card{padding:18px 14px}.stat-card .number{font-size:27px}.words-table th,.words-table td{padding:12px 11px;min-width:110px}.words-table th:last-child,.words-table td:last-child{min-width:91px}.modal-header{padding:21px 18px 9px}.modal-content{padding:9px 18px 19px}.modal-footer{padding:14px 18px 21px}.file-picker{flex-wrap:wrap}.double-field{gap:8px}}
+
+/* v2: звёздочки, части набора, история и полный список */
+.config-panel:has(#studyPart){grid-template-columns:repeat(5,minmax(0,1fr))}
+.card-top-actions{display:flex;align-items:center;gap:9px}
+.star-btn{border:1px solid #e0e6ef;background:#fff;color:#9da7b8;border-radius:10px;min-width:42px;min-height:42px;font-size:26px;line-height:1;display:inline-grid;place-items:center;flex-shrink:0}
+.star-btn.is-starred{color:#e2a41c;background:#fffbec;border-color:#f3d483}
+.star-btn:hover{background:#fffae5}
+.history-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:14px 0 4px}
+.history-nav .btn{min-height:42px;flex-shrink:0}
+.history-nav span{color:#7c8ba0;font-size:12px;text-align:center;flex:1}
+.part-overview{margin:15px 0 0;background:#fff;border:1px solid #e6ebf5;border-radius:16px;padding:17px}
+.part-overview-title{font-size:13px;font-weight:800;color:#3f5372;margin-bottom:12px}
+.part-tiles{display:flex;gap:9px;flex-wrap:wrap}
+.part-tile{background:#f9fbfe;border:1px solid #dae4f1;border-radius:11px;min-height:65px;padding:11px 13px;display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-width:120px;flex:1;text-align:left}
+.part-tile strong{font-size:13px;color:#2a405e}.part-tile small{font-size:11px;color:#73869e}
+.part-tile.selected{background:#eaf2ff;border-color:#6b9df3;box-shadow:inset 0 0 0 1px #6b9df3}
+.star-cell{text-align:center;width:60px;min-width:60px!important;padding:8px!important}
+.words-table .word-star{width:39px;min-width:39px;min-height:39px;height:39px;font-size:23px}
+.words-table td:nth-child(2){font-weight:700}
+.words-table td:nth-child(4){font-size:11px;color:#69809a}
+.deck-parts{display:flex;flex-direction:column;gap:7px;padding:10px;border-radius:11px;background:#f6f9fe}
+.deck-part-button{background:#fff;border:1px solid #e1eafa;border-radius:9px;padding:11px 12px;text-align:left;color:#315888;font-size:12px;font-weight:700;min-height:43px}
+.deck-part-button:hover{background:#e7f0ff}
+.next-part-btn{margin-left:12px}
+.full-list-modal{width:min(760px,calc(100% - 24px));max-height:calc(100% - 30px)}
+.full-list-modal .modal-content{overflow-y:auto;min-height:0}
+.list-filters{display:flex;flex-wrap:wrap;gap:11px}.list-filters .field{min-width:120px;flex:1}.list-filters .grow{flex:2}
+.full-list-rows{border:1px solid #e5eaf1;border-radius:13px;overflow:hidden}
+.full-list-row{display:flex;align-items:center;gap:12px;padding:12px 14px;border-top:1px solid #e8edf4;background:#fff;min-width:0}
+.full-list-row:first-child{border-top:0}.full-list-row:nth-child(2n){background:#fbfcff}
+.full-list-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;flex:1;min-width:0;align-items:center}
+.full-list-front{font-size:15px;font-weight:750;overflow-wrap:anywhere;min-width:0}.full-list-back{font-size:14px;color:#667b96;overflow-wrap:anywhere;min-width:0}
+@media(max-width:1100px){.config-panel:has(#studyPart){grid-template-columns:repeat(2,minmax(0,1fr))}.config-panel:has(#studyPart) .field:last-child{grid-column:span 2}}
+@media(max-width:600px){.config-panel:has(#studyPart){grid-template-columns:repeat(2,minmax(0,1fr))}.config-panel:has(#studyPart) .field:first-child{grid-column:span 2}.config-panel:has(#studyPart) .field:last-child{grid-column:span 2}.part-tile{min-width:118px}.history-nav span{font-size:11px}.full-list-modal .modal-content{padding:10px 14px}.full-list-row{padding:11px 8px;gap:7px}.full-list-pair{gap:8px}.full-list-front{font-size:14px}.full-list-back{font-size:13px}.full-list-rows .star-btn{min-width:38px;min-height:38px}.next-part-btn{margin:10px 0 0}}
+@media(max-width:400px){.study-toolbar #openFullList{flex:1;width:100%;order:3}.study-count{order:4}.full-list-pair{grid-template-columns:minmax(0,1fr);gap:3px}.list-filters .field{min-width:100px}.history-nav{gap:5px}.history-nav .btn{padding:7px 10px;font-size:11px}.history-nav span{font-size:10px}}
